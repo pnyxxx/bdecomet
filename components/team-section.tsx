@@ -9,7 +9,7 @@ const members = [
   {
     name: "Gaspard Bry",
     role: "President",
-    images: ["/assets/gaspard2.jpg", "/assets/gaspard.jpg", "/assets/gaspard3.jpg", "/assets/gaspard5.jpg"],
+    images: ["/assets/gaspard2.png", "/assets/gaspard.jpg", "/assets/gaspard3.jpg", "/assets/gaspard5.jpg"],
     description: "Coordonne le BDE, représente les étudiants auprès de l'école, valide les décisions importantes.",
     instagram: "#",
   },
