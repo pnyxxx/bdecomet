@@ -65,11 +65,11 @@ const quizQuestions: QuizQuestion[] = [
   },
   {
     question: "Combien de membres composent le BDE Comete ?",
-    options: ["4", "5", "6", "8"],
-    correctIndex: 3,
+    options: ["5", "7", "8", "10"],
+    correctIndex: 2,
     memberName: "Toute l'equipe",
     memberImage: "/images/logo_bde.png",
-    funFact: "6 etoiles forment cette comete legendaire !",
+    funFact: "8 etoiles forment cette comete legendaire !",
   },
   {
     question: "Quel est le theme / nom du BDE ?",

@@ -106,7 +106,7 @@ export function HeroSection() {
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
           {
-            "Une equipe de 6 passionnes prets a illuminer votre annee etudiante. Evenements, soirees, projets... On vise les etoiles !"
+            "Une equipe de 8 passionnes prets a illuminer votre annee etudiante. Evenements, soirees, projets... On vise les etoiles !"
           }
         </p>
 
