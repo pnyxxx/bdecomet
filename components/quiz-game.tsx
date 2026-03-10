@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react"
 import Image from "next/image"
 import { CheckCircle2, XCircle, RotateCcw, Trophy, ChevronRight } from "lucide-react"
+import { withBasePath } from "@/lib/with-base-path"
 
 interface QuizQuestion {
   question: string
@@ -99,7 +100,12 @@ const quizQuestions: QuizQuestion[] = [
 
 ]
 
-const normalizedQuestions: QuizQuestion[] = quizQuestions.filter((q) => {
+const quizQuestionsWithBasePath: QuizQuestion[] = quizQuestions.map((question) => ({
+  ...question,
+  memberImage: withBasePath(question.memberImage),
+}))
+
+const normalizedQuestions: QuizQuestion[] = quizQuestionsWithBasePath.filter((q) => {
   return (
     typeof q.question === "string" &&
     Array.isArray(q.options) &&

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { ChevronDown } from "lucide-react"
 import Image from "next/image"
+import { withBasePath } from "@/lib/with-base-path"
 
 export function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -94,7 +95,7 @@ export function HeroSection() {
         {/* Logo */}
         <div className="mb-8 flex justify-center">
           <Image
-            src="/images/logo_bde_bg.png"
+            src={withBasePath("/images/logo_bde_bg.png")}
             alt="Logo BDE Comete"
             width={280}
             height={280}

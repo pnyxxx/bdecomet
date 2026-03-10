@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { withBasePath } from "@/lib/with-base-path"
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
-              src="/images/logo_bde_bg.png"
+              src={withBasePath("/images/logo_bde_bg.png")}
               alt="Logo BDE Comete"
               width={32}
               height={32}

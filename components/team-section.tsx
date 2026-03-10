@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Instagram, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
+import { withBasePath } from "@/lib/with-base-path"
 
 const members = [
   {
@@ -61,7 +62,10 @@ const members = [
     description: "Fait le lien avec les étudiants, remonte les problèmes, propose des actions inclusives et conviviales.",
     instagram: "#",
   },
-]
+].map((member) => ({
+  ...member,
+  images: member.images.map((imagePath) => withBasePath(imagePath)),
+}))
 
 export { members }
 

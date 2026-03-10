@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { withBasePath } from "@/lib/with-base-path"
 
 const navLinks = [
   { href: "#accueil", label: "Accueil" },
@@ -37,7 +38,7 @@ export function Navbar() {
         {/* Logo */}
         <a href="#accueil" className="flex items-center gap-2 group">
           <Image
-            src="/images/logo_bde_bg.png"
+            src={withBasePath("/images/logo_bde_bg.png")}
             alt="Logo BDE Comete"
             width={48}
             height={48}
