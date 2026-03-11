@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Calendar, Clock, MapPin } from "lucide-react"
+import { Calendar } from "lucide-react"
 
 const days = [
   {
@@ -74,9 +74,7 @@ export function ProgramSection() {
             Programme de la semaine
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            {
-              "Chaque semaine est une nouvelle aventure. Voici ce qui vous attend !"
-            }
+            {"Le planning detaille arrive bientot. Reste connecte pour les prochaines annonces !"}
           </p>
         </div>
 
@@ -110,35 +108,20 @@ export function ProgramSection() {
           </div>
 
           <div className="flex flex-col gap-4">
-            {days[activeDay].events.map((event, index) => (
+            {days[activeDay].events.map((_, index) => (
               <div
-                key={`${event.title}-${index}`}
+                key={`${days[activeDay].day}-${index}`}
                 className="group relative flex items-start gap-6 p-6 rounded-xl border border-border bg-card/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-500"
               >
-                {/* Time */}
-                <div className="flex-shrink-0 text-center">
-                  <div className="flex items-center gap-1.5 text-accent">
-                    <Clock size={14} />
-                    <span className="font-display font-bold text-lg">{event.time}</span>
-                  </div>
+                <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary border border-primary/30">
+                  Prochainement
                 </div>
 
-                {/* Divider */}
-                <div className="hidden sm:block w-px self-stretch bg-border" />
-
-                {/* Content */}
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h4 className="font-display text-lg font-bold text-foreground">
-                      {event.title}
-                    </h4>
-                    <span
-                    >
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                    <MapPin size={14} />
-                    <span>{event.location}</span>
+                <div className="flex-1 blur-sm select-none">
+                  <div className="flex flex-col gap-3">
+                    <div className="h-5 w-24 rounded bg-accent/25" />
+                    <div className="h-6 w-3/4 rounded bg-foreground/15" />
+                    <div className="h-4 w-1/2 rounded bg-muted-foreground/20" />
                   </div>
                 </div>
 

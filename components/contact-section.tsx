@@ -12,14 +12,14 @@ const socials = [
     icon: MessageCircle,
     label: "Discord",
     handle: "BDE Comete",
-    href: "https://discord.gg/JPCVDFNHr",
+    href: "https://discord.gg/yKmuhFJjR6",
     color: "hover:text-[hsl(235,86%,65%)]",
   },
   {
     icon: Mail,
     label: "Email",
-    handle: "bde.comete@ecole.fr",
-    href: "mailto:bde.comete@ecole.fr",
+    handle: "bde.comete@gmail.com",
+    href: "mailto:bde.comete@gmail.com",
     color: "hover:text-primary",
   },
 ]
